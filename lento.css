@@ -1,0 +1,108 @@
+/* Lento Auto Repair CSS File */
+
+
+body {
+	/*The background-color changes the main color of the page. */
+	background-color: #8688ad;
+	
+	/*The color adjusts the color of all of the text.*/
+	color: #0f1673;
+	
+	font-family: Georgia, Arial, sans-serif;
+}
+
+* {box-sizing: border-box}
+
+header {
+	background-color: #FFFFFF;
+	background-position: right;
+	background-repeat: no-repeat;
+	text-align: center;
+	height: 205px;
+	display: block;
+}
+
+table {
+	width: 85%;
+	border: 1px solid;
+	border-color: brown;
+	border-collapse: collapse;
+	margin-bottom: 1em;
+	justify-content: center;
+}
+
+nav {
+	background-color: #FFFFFF;
+	font-weight: bold;
+	padding: 0.5em;
+	width: 160px;
+	display: block;
+	float: none;
+	width: auto;
+	padding-left: 2em;
+	}
+
+
+/* This section adjusts the navigation buttons for the menu. */
+nav a {
+	padding: 0.3em;
+	margin-left: 0.3em;
+	float: left;
+	width: 32%;
+	background-color: #d02d1f;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	border: 2px outset #e02d1f;
+	margin-bottom: 1em;
+	display: block;
+}
+
+nav ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  background-color: #0f1673;
+}	
+
+main {
+	padding-left: 0.2em;
+	padding-top: 1em;
+	margin-left: 35px;
+	margin-right: 35px;
+	display: block;
+}
+
+footer {
+	background-color: #e02d1f;
+	font-size: .75em;
+	font-style: italic;
+	text-align: center;
+	padding: 1em;
+	display: block;
+}
+
+caption {
+	margin: 1em;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+#wrapper {
+	background-color: #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	min-width: 1200px;
+	max-width: 1480px;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+}
