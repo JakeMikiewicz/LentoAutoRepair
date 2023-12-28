@@ -22,6 +22,47 @@ header {
 	display: block;
 }
 
+label {
+	display: inline;
+	text-align: right;
+	font-weight: bold;
+	width: 10em;
+	padding-right: 0.5em;
+}
+
+section {
+	width: 90%;
+	padding: 0.5em;
+	padding-left: 1.5em;
+	margin: 1em 0em 0.5em 0em;
+	background-color: #BBBBBB;
+	color: #000000;
+}
+
+section form {
+	padding: 0.5em;
+}
+
+table {
+	width: 85%;
+	border: 1px solid;
+	border-color: brown;
+	border-collapse: collapse;
+	margin-bottom: 1em;
+	justify-content: center;
+}
+
+h1 {
+	padding-top: 50px;
+	padding-left: 2em;
+}
+
+
+td, th {
+	padding: 5px;
+	border: 1px solid purple;
+}
+
 table {
 	width: 85%;
 	border: 1px solid;
