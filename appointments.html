@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <title>Lento Auto Repair</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Lento Auto Repair site for Lento Auto Repair, a local Auto Body shop located in Schiller Park, Illinois, servicing many types of vehicles." />
+    <link rel="stylesheet" type="text/css" href="jake.css" />
+    <script>
+        function populateTimes() {
+            var select = document.getElementById('time');
+            select.innerHTML = '';
+
+            var startTime = 9 * 60; // 9am in minutes
+            var endTime = 19 * 60; // 7pm in minutes
+            var interval = 15; // 15-minute interval
+
+            for (var i = startTime; i < endTime; i += interval) {
+                var hours = Math.floor(i / 60);
+                var minutes = i % 60;
+
+                var ampm = hours >= 12 ? 'PM' : 'AM';
+                hours = hours % 12;
+                hours = hours ? hours : 12; // Handle midnight (0 hours)
+
+                var timeString = ('0' + hours).slice(-2) + ':' + ('0' + minutes).slice(-2) + ' ' + ampm;
+                var option = document.createElement('option');
+                option.text = timeString;
+                option.value = timeString;
+                select.add(option);
+            }
+        }
+    </script>
+</head>
+<body onload="populateTimes()">
+    <div id="wrapper">
+		<header>
+			<br />
+			<a href="index.html"><span class="disabledlogo"><span class="image"><img src="logo.png" alt="Lento Auto Repair" width="200" height="200" /></span></span></a>
+		</header>
+		<nav>
+			<ul>
+				<li><strong><a href="index.html.">Home</a></strong></li>
+				<li><strong><a href="about.html.">About</a></strong></li>
+				<li><strong><a href="repair.html.">Repairs</a></strong></li>
+				<li><strong><a href="safety.html.">Safety &amp; Maintenance</a></strong></li>
+				<li><strong><a href="appointments.html." class="disabled">Appointments</a></strong></li>
+				<li><strong><a href="contact.html.">Contact</a></strong></li>
+			</ul>
+		</nav>
+        <br />
+        <main>
+            <h1>Appointment System</h1>
+			<p>In the form below, please enter in your full name, email, the desired date of the appointment and the time.
+			We have openings from 9:00 A.M. to 7:00 P.M. from Monday through Saturday. Once you submit your appointment, you are all set to met with one of our experts on the date that is set!</p><br />
+            <form action="appointment.php" method="post" onsubmit="return validateForm()">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name"><br />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br />
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date"><br />
+
+                <label for="time">Time:</label>
+                <select id="time" name="time"></select><br /><br />
+
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+        <footer>
+            <em>Copyright &#xA9; 2023 Lento Auto Repair.</em>
+            <br /><a href="mailto:contact@lentoautorepair.com">contact@lentoautorepair.com</a>
+        </footer>
+    </div>
+</body>
+</html>
