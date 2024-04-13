@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Contact Lento Auto Repair</title>
+		<meta charset="utf-8"/>
+		<meta content="content=Lento Auto Repair site for Lento Auto Repair, a local Auto Body shop located in Schiller Park, Illinois, servicing many types of vehicles." name="description"/>
+		<link href="lento.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<div id="wrapper">
+		<header><br/>
+			<a href="index.html."><span class="image"><img alt="Lento Auto Repair" height="200" src="logo.png" width="200"/></span></a>
+		</header>
+		<nav>
+			<ul>
+				<li><strong><a href="index.html.">Home</a></strong></li>
+				<li><strong><a href="about.html.">About</a></strong></li>
+				<li><strong><a href="repair.html.">Repairs</a></strong></li>
+				<li><strong><a href="safety.html.">Safety &amp; Maintenance</a></strong></li>
+				<li><strong><a href="appointments.html.">Appointments</a></strong></li>
+				<li><strong><a class="disabled" href="contact.html.">Contact</a></strong></li>
+			</ul>
+		</nav>
+		<br/>
+		<main>
+			<h2>Contact Lento Auto Repair</h2>
+			<p>Thank you for choosing Lento Auto Repair. If you'd like to contact one of our team members, please complete the form below and someone will respond within one to two business days.'
+					You also can call us at 1-800-233-0397.</p>
+					
+			<form action="mailto:jakemiki29@gmail.com" enctype="text/plain" method="post">
+			
+			<!-- This is for first and last name, respectively -->
+			<label for="firstName">* First Name:</label><input id="firstName" name="firstName" required="required" size="20" type="text"/>
+			<label for="lastName">* Last Name:</label><input id="lastName" name="lastName" required="required" size="20" type="text"/>
+			
+			<!-- This is for gender -->
+			<label>* Gender:</label>
+			<input class="radio" id="gender" name="gender" type="radio" value="Male"/><label for="gender">Male</label>
+			<input class="radio" id="gender1" name="gender" type="radio" value="Female"/><label for="gender1">Female</label>
+			
+			<br/><br/>
+			<!-- Email field -->
+			<label for="myEmail">E-mail:</label><input id="myEmail" name="myEmail" size="20" type="email"/>
+			<br />
+			
+			<!-- Phone number -->
+			<label for="myPhone">* Phone:</label><input id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="" required="" type="tel"/>
+			<br /><br />
+			
+			<!-- Model Year -->
+			<label for="years">Model Year:</label>
+			<select id="years" name="years">
+			
+			<!-- Options will be populated dynamically using JavaScript -->
+			</select>
+			<script>
+				  const selectElementYears = document.getElementById("years");
+
+				  // Loop through the years range (1980 to 2024) and create an option for each
+				  for (let year = 2024; year >= 1980; year--) {
+					const option = document.createElement("option");
+					option.value = year; // Set the value to the year
+					option.text = year; // Set the visible text
+					selectElementYears.appendChild(option); // Append the option to the select element
+				  }
+				</script>
+			<br/><br/>
+			<label for="cars">Manufacturer:</label>
+			<select id="cars" name="cars">
+			<!-- Options will be populated dynamically using JavaScript -->
+			</select>
+			<script>
+				  // Array of car manufacturers (sample data)
+				  const carManufacturers = [
+					"Acura", "Alfa Romeo", "Aston Martin", "Audi", "Bentley", "BMW", "Buick", "Cadillac", "Chevrolet", "Chrysler", "Dodge", "Ferrari", "Ford", "GMC", "Honda", "Hyundai", "Infiniti", "Jaguar", "Jeep",
+					"Lexus", "Mazda", "Mercedes-Benz", "Mitsubishi", "Porsche", "RAM", "Saturn", "Smart", "Subaru", "Tesla", "Volkswagen", "Volvo"
+				  ];
+
+				  const selectElementCars = document.getElementById("cars");
+
+				  // Loop through the car manufacturers array and create an option for each
+				  carManufacturers.forEach(manufacturer => {
+					const option = document.createElement("option");
+					option.value = manufacturer.toLowerCase(); // Set the value to lowercase
+					option.text = manufacturer; // Set the visible text
+					selectElementCars.appendChild(option); // Append the option to the select element
+				  });
+				</script>
+			<br/><br/>
+			<label for="model">* Model:</label><input id="model" name="model" required="required" size="15" type="text"/>
+			<label for="myComments">* Other Info:</label>
+			<textarea cols="60" id="myComments" name="myComments" required="required" rows="3"></textarea><br/>
+			<input id="mySubmit" onclick="submitForm()" type="button" value="Send Now"/>
+			</form>
+		</main>
+		<footer>
+		<address>
+				Lento Auto Repair<br/>
+				9301 Byron Street, Schiller Park, IL 60176<br/>
+				Phone: 800-233-0397 | Fax: 800-233-0398
+			</address>
+		<p>© 2024 Lento Auto Repair. All Rights Reserved.</p>
+		</footer>
+		</div>
+	</body>
+</html>
