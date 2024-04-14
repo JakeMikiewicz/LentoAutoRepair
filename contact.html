@@ -91,7 +91,7 @@
 			<label for="model">* Model:</label><input id="model" name="model" required="required" size="15" type="text"/>
 			<label for="myComments">* Other Info:</label>
 			<textarea cols="60" id="myComments" name="myComments" required="required" rows="3"></textarea><br/>
-			<input id="mySubmit" onclick="submitForm()" type="button" value="Send Now"/>
+			<input id="mySubmit" type="submit" value="Send Now"/>
 			</form>
 		</main>
 		<footer>
@@ -103,5 +103,19 @@
 		<p>© 2024 Lento Auto Repair. All Rights Reserved.</p>
 		</footer>
 		</div>
-	</body>
+	
+<script>
+function handleFormSubmit(event) {
+    event.preventDefault(); // Prevent the default form submission
+    var form = document.querySelector('form');
+    form.reset(); // Clear the form fields
+    alert('Thanks for contacting us! We will reply within the next business day. We look forward to servicing you.');
+    window.location.href = 'index.html'; // Redirect to the home page
+}
+
+// Add the event listener for the form
+document.querySelector('form').addEventListener('submit', handleFormSubmit);
+</script>
+</body>
+
 </html>
